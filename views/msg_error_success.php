@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['success'])): ?>
-    <div class="msg alert-dismissible'">
+    <div class="msg">
     <?php 
             echo $_SESSION['success']; 
             unset($_SESSION['success']);

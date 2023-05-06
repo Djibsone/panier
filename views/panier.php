@@ -25,7 +25,7 @@
                 <?= $tbody; ?>
              <!--end tbody-->
              <tr class="total">
-                <th>Total : <?= number_format($total, 2) ?>€</th>
+                <th>Total : <?= number_format($total, 2,',',' ') ?>€</th>
             </tr>
         </table>
     </section>

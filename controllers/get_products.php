@@ -1,5 +1,6 @@
 <?php
 require_once './models/config.php';
+$_SESSION['panier'];
 
 //get all product
 $Products = getProducts();

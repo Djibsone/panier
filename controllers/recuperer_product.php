@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 require_once '../models/config.php';
 
 //liste des produits
@@ -12,5 +12,17 @@ if (empty($keys)) {
 } else {
     //si oui
     $check = getProduitKeys($keys);
-   echo $tbody;
+    $tbody = ''; // Déclaration de $tbody en dehors de la boucle
+
+    foreach($check as $data) {
+        $tbody .= '
+            <tr>
+                <td><img src="../assets/images/' . $data["img"] . '" alt=""></td>
+                <td>' . $data["name"] . '</td>
+                <td>' . number_format($data["price"], 2) . '€</td>
+                <td>' . $_SESSION["panier"][$data["id"]] . '</td>
+                <td><img src="../assets/images/del.png" alt=""></td>
+            </tr>
+        ';
+    }
 }

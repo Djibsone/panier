@@ -2,10 +2,10 @@
 require_once '../models/config.php';
 
 //verifier si une session existe
-if(!isset($_SESSION)) {
+/*if(!isset($_SESSION)) {
     //si non demarrer la session
     session_start();
-}
+}*/
 
 //creer la session
 if(!isset($_SESSION['panier'])) {

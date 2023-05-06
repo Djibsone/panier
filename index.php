@@ -1,8 +1,4 @@
-<?php 
-//session_start(); 
-include 'controllers/get_products.php'; 
-?>
-
+<?php include 'controllers/get_products.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +11,11 @@ include 'controllers/get_products.php';
 </head>
 <body>
     <a href="./views/panier.php" class="link">Panier<span><?= array_sum($_SESSION['panier']) ?></span></a>
+    <?php include 'views/msg_error_success.php' ?>
     <section class="products_list">
-        <?= $tbody; ?>
+        <!--tbody-->
+            <?= $tbody; ?>
+        <!--end tbody-->
     </section>
 </body>
 </html>

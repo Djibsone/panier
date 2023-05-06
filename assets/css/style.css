@@ -42,7 +42,7 @@ span {
 }
 
 .products_list {
-    margin: 100px auto;
+    margin: 50px auto;
     position: relative;
     width: 70%;
     display: grid;
@@ -111,7 +111,7 @@ span {
 
 .panier img {
     cursor: pointer;
-    width: 40px;
+    width: 50px;
     padding: 8px; 
 }
 
@@ -147,7 +147,31 @@ tr {
 .total th {
     border: 0;
     float: left; 
+    font-size: 18px;
     font-weight: 500;
-    color: #37a6ff;
+    /* color: #37a6ff; */
+    color: black;
     padding: 10px;
+}
+
+/* message_success_error */
+.msg {
+    margin: 30px auto; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    width: 50%;
+    text-align: center;
+}
+.err {
+    margin: 30px auto; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: white; 
+    background:red ; 
+    border: 1px solid #800000;
+    width: 50%;
+    text-align: center;
 }

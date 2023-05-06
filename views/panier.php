@@ -10,19 +10,22 @@
     <title>Panier</title>
 </head>
 <body class="panier">
+<?php include 'msg_error_success.php' ?>
     <a href="../" class="link">Boutique</a>
     <section>
         <table>
             <tr>
-                <th></th>
+                <th>Photo</th>
                 <th>Nom</th>
                 <th>Prix</th>
                 <th>Quantité</th>
                 <th>Action</th>
             </tr>
-            <?= $tbody; ?>
-            <tr class="total">
-                <th>Total : 25€</th>
+            <!--tbody-->
+                <?= $tbody; ?>
+             <!--end tbody-->
+             <tr class="total">
+                <th>Total : <?= number_format($total, 2) ?>€</th>
             </tr>
         </table>
     </section>

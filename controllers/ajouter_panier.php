@@ -27,15 +27,15 @@ if(isset($_GET['p'])) {
         //si le produit existe dans le panier
     if(isset($_SESSION['panier'][$id])) {
         //represente la quantity
-        $_SESSION['panier'][$id]++; 
-        header('Location: ../');
+        $_SESSION['panier'][$id]++;
+        $_SESSION['success'] = 'Le produit a été réajouté au panier !';
     } else {
         //si non on ajoute le produit
         $_SESSION['panier'][$id] = 1;
-        //echo 'Le produit a été ajouté au panier !';
-        //header('Location: ../');
+        $_SESSION['success'] = 'Le produit a été ajouté au panier !';
     }
 
+    header('Location: ../');
 }
 
 //echo $data['name'];

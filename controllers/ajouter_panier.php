@@ -20,7 +20,7 @@ if(isset($_GET['p'])) {
     $check = getProduct($id);
     $data = $check->fetch();
     if (empty($data)) {
-       die('Ce produit n\'existe pas !');
+       die('<h2 style="text-align: center; margin-top: 20px">Ce produit n\'existe pas !</h2>');
     }
 
     //ajouter le produit dans le panier (le tableau)

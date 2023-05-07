@@ -10,7 +10,10 @@
     <title>Boutique</title>
 </head>
 <body>
-    <a href="./views/panier.php" class="link">Panier<span><?= array_sum($_SESSION['panier']) ?></span></a>
+    <div class="btn">
+        <a href="./views/panier.php" class="link">Panier<span><?= array_sum($_SESSION['panier']) ?></span></a>
+        <a href="./views/logout.php" class="log">Log Out</a>
+    </div>
     <?php include 'views/msg_error_success.php' ?>
     <section class="products_list">
         <!--tbody-->

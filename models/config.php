@@ -43,8 +43,8 @@ function getProduitKeys($keys){
 function getProduitKeys($keys){
     $db = dbConnect();
 
-    $placeholders = rtrim(str_repeat('?,', count($keys)), ',');
-    $query = 'SELECT * FROM products WHERE id IN (' . $placeholders . ')';
+    $subt = rtrim(str_repeat('?,', count($keys)), ',');
+    $query = 'SELECT * FROM products WHERE id IN (' . $subt . ')';
 
     $stmt = $db->prepare($query);
     $stmt->execute($keys);

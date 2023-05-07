@@ -1,6 +1,12 @@
 <?php
 require_once './models/config.php';
-$_SESSION['panier'];
+
+// Initialiser la session du panier avec un tableau vide s'il n'existe pas déjà
+if (!isset($_SESSION['panier'])) {
+    $_SESSION['panier'] = array();
+}
+/* <a href="./views/panier.php" class="link">Panier<span><?= isset($_SESSION['panier']) ? array_sum($_SESSION['panier']) : 0 ?></span></a>*/
+
 
 //get all product
 $Products = getProducts();

@@ -198,3 +198,29 @@ tr {
     font-weight: 500;
     font-size: large;
 }
+
+@media screen and (max-width: 799px) {
+
+    * {
+        padding: 2px;
+    }
+
+    /*panier*/
+    .panier section {
+        width: 100%;   
+    }
+    
+}
+
+@media screen and (max-width: 477px) {
+
+    * {
+        padding: 2px;
+    }
+
+    /*panier*/
+    .panier section {
+        width: 100%;   
+    }
+    
+}
